@@ -1,0 +1,27 @@
+[{  "productId":1,
+    "product":"Broccoli",
+    "code":"GDN-0011",
+    "available":"Mar 19,2019",
+    "price":20,
+    "rating":5,
+    "productImage":"./../../assets/broccoli.jpg"
+},
+{
+    "productId":2,
+    "product":"Red Bell Pepper",
+    "code":"GDN-0021",
+    "available":"April 19,2019",
+    "price":25,
+    "rating":4,
+    "productImage":"./../../assets/Red Bell Pepper.jpg"
+},
+{
+    "productId":3,
+    "product":"Yellow Bell Pepper",
+    "code":"GDN-0041",
+    "available":"Mar 20,2019",
+    "price":21,
+    "rating":2,
+    "productImage":"./../../assets/Yellow Bell Pepper.jpg"
+}
+]

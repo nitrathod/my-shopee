@@ -1,0 +1,29 @@
+<div class="card" style="width:800px" *ngIf="_product">
+  <div class="card-header">
+    Product ID: {{productId}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Product Details : {{_product.product}}</h5>
+    <div class="row">
+    <div class="col-xs-8">
+      <img src={{_product.productImage}} height="180" width="220"/>
+    </div>
+    <div class="col">
+    <div class="col-xs-6">
+      Product Code : {{_product.code}}
+    </div>
+    <br />
+    <div class="col-xs-6">
+      Price: {{_product.price}}
+    </div>
+    <br />
+    <div class="col-xs-6">
+      Available from : {{_product.available}}
+    </div>
+  </div>
+  </div>
+  <br />
+    <a routerLink="/products" class="btn btn-primary">Back</a>
+  </div>
+</div>
+
