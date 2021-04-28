@@ -1,4 +1,5 @@
-<div class="card" style="margin-left:60px" style="width: 800px">
+<div class="container">
+  <div class="card" style="margin-left:60px" style="width: 800px">
     <div class="card-header text-white bg-primary">
       Product List
     </div>
@@ -6,16 +7,16 @@
       <div class="form-group row">
         <label for="searchText" class="col-sm-0 col-form-label">Filter By : </label>
         <div class="col-md-10">
-            <input type="text" class="form-control" placeholder="Search here..." 
-                   style="width:200px" [(ngModel)]="searchText">
-            <label for="searchText" class="col-sm-0 col-form-label">Filtered Value : {{searchText}}</label>
+          <input type="text" class="form-control" placeholder="Search here..." style="width:200px"
+            [(ngModel)]="searchText">
+          <label for="searchText" class="col-sm-0 col-form-label" style="margin-left: -78px;">Filtered Value : {{searchText}}</label>
         </div>
-        
+
       </div>
-      <div class="container">
-        <button (click)="toggle()" type="button" class="btn btn-info">
-              {{showDetails ? 'Hide' : 'Show'}} Image
-        </button>        
+      <div>
+        <button (click)="toggle()" type="button" class="btn btn-info button">
+          {{showDetails ? 'Hide' : 'Show'}} Image
+        </button>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -29,16 +30,20 @@
           </thead>
           <tbody>
             <tr *ngFor="let productpost of productposts | productFilter: searchText">
-                <td><img *ngIf="showDetails" src={{productpost.productImage}} height="180" width="220"/></td>
-                <div (click)="onClick(productpost.productId)"><td><a routerLink="/productpost/{{productId}}">{{productpost.product}}</a></td></div>
-                <td>{{productpost.code}}</td>
-                <td>{{productpost.available}}</td>
-                <td>{{productpost.price | currency:'INR'}}</td>
-                <td><ngb-rating [(rate)]="productpost.rating" [readonly]="true" max="5"></ngb-rating></td>
+              <td><img *ngIf="showDetails" src={{productpost.productImage}} height="180" width="220" /></td>
+              <div (click)="onClick(productpost.productId)">
+                <td><a routerLink="/productpost/{{productId}}">{{productpost.product}}</a></td>
+              </div>
+              <td>{{productpost.code}}</td>
+              <td>{{productpost.available}}</td>
+              <td>{{productpost.price | currency:'INR'}}</td>
+              <td>
+                <ngb-rating [(rate)]="productpost.rating" [readonly]="true" max="5"></ngb-rating>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
-
+</div>
